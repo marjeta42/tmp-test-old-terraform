@@ -28,13 +28,8 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "random_pet" "lambda_bucket_name" {
-  prefix = "learn-terraform-functions"
-  length = 4
-}
-
 resource "aws_s3_bucket" "lambda_bucket" {
-  bucket = random_pet.lambda_bucket_name.id
+  bucket = "learn-terraform-fun-allegedly-expert-shrew"
 
   force_destroy = true
 }
