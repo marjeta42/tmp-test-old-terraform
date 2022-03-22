@@ -10,7 +10,8 @@ logging.basicConfig(level=LOGGING_DEFAULT_LEVEL, format=LOGGING_FORMAT)
 logger = logging.getLogger("my-test-handler")
 
 
-def my_test_handler(event):
+def my_test_handler(context, event):
+    logger.info(f"Event: {context}")
     logger.info(f"Event: {event}")
 
     response_message = "Hello, World"
