@@ -17,7 +17,7 @@ terraform {
   backend "s3" {
     bucket = "om-terraform-remote-state-storage-bucket"
     key    = "tmp-learn-terraform-functions/terraform.tfstate"
-#    workspace_key_prefix = "tmp-learn-terraform-functions"
+    #    workspace_key_prefix = "tmp-learn-terraform-functions"
     region = "us-east-2"
   }
 
